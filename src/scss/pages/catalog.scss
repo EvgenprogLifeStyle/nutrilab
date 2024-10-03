@@ -1,0 +1,312 @@
+.intro {
+  display: flex;
+  align-items: flex-end;
+  min-height: 540rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 380rem;
+  padding-bottom: 40rem;
+  position: relative;
+  overflow: hidden;
+
+  @include sm {
+    min-height: 530rem;
+    padding-top: 294rem;
+    padding-bottom: 30rem;
+    border-radius: 0 0 30rem 30rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+
+    @include sm {
+      opacity: 0.4;
+    }
+  }
+
+  &.intro_about {
+    min-height: 600rem;
+    padding-bottom: 60rem;
+    background-image: url('../img/intro/02.png');
+
+    @include md {
+      min-height: 530rem;
+      padding-bottom: 136rem;
+      background-image: url('../img/intro/02_sm.png');
+    }
+  }
+
+  // .intro__wrap
+  &__wrap {
+    position: relative;
+    z-index: 2;
+
+    @include sm {
+      flex-direction: column;
+      align-items: start;
+      padding-left: 20rem;
+      padding-right: 20rem;
+    }
+  }
+
+  // .intro__content
+  &__content {
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  // .intro__about
+  &__about {
+    font-size: 100rem;
+    width: 100%;
+    text-transform: uppercase;
+    color: #fafafa;
+    text-align: center;
+
+    @include sm {
+      font-size: 50rem;
+    }
+  }
+
+  .breadcrumbs {
+    color: #FAFAFA;
+    padding: 0;
+    background: transparent;
+    margin: 0;
+    opacity: 0.5;
+  }
+
+  .title {
+    margin-top: 20rem;
+    color: #fff;
+
+    @include sm {
+      margin-top: 10rem;
+    }
+  }
+
+  // .intro__list
+  &__list {
+    gap: 20rem;
+    margin-left: 40rem;
+
+    @include sm {
+      margin: 30rem 0 0 0;
+    }
+  }
+}
+
+.cart-intro {
+  width: 160rem;
+  padding: 20rem;
+  display: block;
+  min-height: 120rem;
+  backdrop-filter: blur(20rem);
+  background: rgba(244, 245, 249, 0.1);
+  border-radius: 15rem;
+  position: relative;
+  transition: all 0.3s ease 0s;
+
+  @include sm {
+    width: 140rem;
+
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      backdrop-filter: blur(80rem);
+      color: #294456;
+
+      .cart-intro__arr {
+        top: 12rem;
+        right: 12rem;
+      }
+    }
+  }
+
+  // .cart-intro__icon
+  &__icon {
+    width: 20rem;
+    height: 24rem;
+    display: inline-block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .cart-intro__arr
+  &__arr {
+    position: absolute;
+    top: 16rem;
+    right: 16rem;
+    width: 20rem;
+    height: 20rem;
+    transition: all 0.2s ease 0s;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: #fff;
+      fill: transparent
+    }
+  }
+
+  p {
+    margin-top: 14rem;
+    color: #fff;
+
+    @include sm {
+      font-size: 14rem;
+    }
+  }
+}
+
+.catalog {
+  .filter {
+    margin-bottom: 40rem;
+  }
+
+  // .catalog__list
+  &__list {
+    gap: 20rem;
+
+    @include md {
+      gap: 12rem;
+    }
+
+    @include sm {
+      gap: 10rem
+    }
+
+    .cart-product {
+      width: calc(25% - 15rem) !important;
+
+      @include md {
+        width: calc(33.33% - 8rem) !important;
+      }
+
+      @include sm {
+        width: calc(50% - 5rem) !important;
+      }
+
+      @include xsm {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.pagin {
+  margin-top: 60rem;
+  width: 100%;
+  gap: 10rem;
+
+  @include sm {
+    margin-top: 30rem;
+  }
+
+  a {
+    min-width: 60rem;
+    height: 60rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    font-weight: 500;
+    font-size: 20rem;
+    color: rgba(41, 68, 86, 0.3);
+    transition: all 0.3s ease 0s;
+
+    @include sm {
+      min-width: 40rem;
+      height: 40rem;
+      font-size: 12rem;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(42, 44, 54, 0.1)
+      }
+    }
+
+    &.active {
+      background: #D4E7C8;
+      color: #294456;
+    }
+  }
+
+  a.pagin__btn {
+    width: 160rem;
+    border-radius: 100rem;
+    border-color: #294456;
+    color: #294456;
+
+    @include sm {
+      font-size: 0;
+      width: 60rem;
+      height: 60rem;
+    }
+
+    &.disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: #294456;
+        color: #fff;
+
+        svg {
+          stroke: #fff;
+        }
+      }
+    }
+
+    &.pagin__btn_prev {
+      margin-right: 50rem;
+
+      @include sm {
+        margin-right: 5rem;
+      }
+    }
+
+    &.pagin__btn_next {
+      margin-left: 50rem;
+
+      @include sm {
+        margin-left: 5rem;
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      display: none;
+      stroke: #294456;
+      fill: transparent;
+
+      @include sm {
+        width: 20rem;
+        height: 20rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  .sm {
+    @include sm {
+      display: none;
+    }
+  }
+}

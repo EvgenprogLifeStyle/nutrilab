@@ -1,0 +1,145 @@
+.fc {
+  @include md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // .fc__name
+  &__name {
+    margin: 30rem 0 0 30rem;
+    font-size: 40rem;
+    color: #fafafa;
+    line-height: calc(51 / 40);
+
+    @include md {
+      margin: 0;
+      font-size: 30rem;
+      padding: 20rem;
+    }
+  }
+
+  // .fc__wrap
+  &__wrap {
+    background: url(../img/corp/banner.png) center/cover no-repeat;
+    border-radius: 40rem;
+    padding: 30rem;
+
+    @include md {
+      flex-direction: column;
+      padding: 10rem;
+      border-radius: 30rem;
+    }
+  }
+}
+
+.fc-form {
+  border-radius: 30rem;
+  background: #F4F1E8;
+  padding: 40rem;
+  width: 640rem;
+
+  @include md {
+    width: 100%;
+    padding: 30rem 20rem;
+    border-radius: 20rem;
+  }
+
+  .input-box {
+    &:not(:last-child) {
+      margin-bottom: 20rem;
+    }
+  }
+
+  // .fc-form__bottom
+  &__bottom {
+    margin-top: 60rem;
+
+    @include md {
+      margin-top: 30rem;
+      flex-direction: column;
+      gap: 30rem;
+      align-items: start;
+    }
+
+    .btn {
+      max-width: 260rem;
+      height: 60rem;
+
+      @include md {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.checkbox {
+  cursor: pointer;
+
+  // .checkbox__input
+  &__input {}
+
+  // .checkbox__text
+  &__text {}
+}
+
+.checkbox {
+
+  &.parsley-error {
+    .checkbox__text {
+      &::before {
+        background: rgba(218, 37, 28, 0.2);
+      }
+    }
+  }
+
+  // .checkbox__input
+  &__input {
+    display: none;
+
+    &:checked+.checkbox__text {
+      &::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.6875 4.99999L5.225 8.53749L12.3125 1.46249' stroke='%2370B049' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  // .checkbox__label
+  &__label {
+    display: flex;
+    cursor: pointer;
+
+    span {}
+  }
+
+  // .checkbox__text
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 22rem;
+    font-size: 14rem;
+    color: rgba(42, 44, 54, 0.5);
+    max-width: 184rem;
+
+    @include md {
+      max-width: 100%;
+      gap: 20rem;
+    }
+
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      width: 25rem;
+      height: 25rem;
+      border-radius: 4rem;
+      background-color: #D4E7C8;
+      display: inline-flex;
+    }
+  }
+
+
+  &+.parsley-errors-list {
+    display: none;
+  }
+}

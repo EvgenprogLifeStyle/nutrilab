@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Новости" })
+    <body>
+        @@include('components/header/header.html', {class:"secondary"})
+        <main class="wrapper">
+            <div class="intro" style="background-image: url('img/intro/07.png')">
+                <div class="intro__wrap flex sb cv container">
+                    <div class="intro__content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="/" class="link-hover">Главная</a></li>
+                                <li><span>Новости</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="title">Новости</h1>
+                    </div>
+                </div>
+            </div>
+            <section class="mt_60">@@include('components/newsSlider/newsSlider.html', {"class":'other'})</section>
+
+            <section class="container">
+                <div class="news-intro flex cv mt_60">
+                    <div class="news-intro__banner">
+                        <div class="news-intro__date">01.05.24</div>
+                        <img src="@img/news/banner.png" alt="banner_img" />
+                    </div>
+                    <div class="news-intro__content">
+                        <div class="news-intro__share flex-cc">
+                            Поделиться <span class="flex-cc"><img src="@img/icons/share.svg" alt="share_img" /></span>
+                        </div>
+                        <div class="title">ТАБЛЕТКИ: Как выбрать?</div>
+                        <div class="news-intro__prev">Таблетки и капсулы проверяют на внешний вид, однородность, твёрдость, скорость растворения и высвобождения активного вещества. Мази и гели — на вязкость, pH, однородность активного вещества и внешний вид. Растворы — на прозрачность и цвет, pH, концентрацию.</div>
+                        <a href="#" class="news-intro__link all-link">Подробнее</a>
+                    </div>
+                </div>
+            </section>
+            @@include('components/homeCatalog/homeCatalog.html', { }) @@include('components/feedbackBlock/feedbackBlock.html', {})
+        </main>
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

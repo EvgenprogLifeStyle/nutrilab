@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Вопрос врачу" })
+    <body>
+        @@include('components/header/header.html', {})
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap" type="text/javascript"></script>
+        <main class="wrapper pt_180">
+            <div class="mt_40">
+                <div class="container">
+                    <div class="quistion flex">
+                        <div class="quistion__banner flex fe" style="background-image: url('img/quistion_banner.png')">
+                            <h3>Задайте вопрос нашему врачу</h3>
+                        </div>
+                        <form class="quistion__form form flex dc" data-parsley-validate>
+                            <div class="quistion__col">
+                                <div class="input-box">
+                                    <label>Ваше ФИО:</label>
+                                    <input type="text" class="input" placeholder="Иванов Иван Иванович" required data-parsley-required-message="Поле обязательно для заполнения" data-parsley-minlength="3" />
+                                </div>
+                                <div class="input-box">
+                                    <label>Ваша почта:</label>
+                                    <input type="text" class="input" placeholder="example@gmail.com" required data-parsley-required-message="Поле обязательно для заполнения" data-parsley-type="email" />
+                                </div>
+                                <div class="input-box">
+                                    <label>Ваш телефон:</label>
+                                    <input type="tel" class="input phone" placeholder="+7 (999) 999 00 99" required data-parsley-required-message="Поле обязательно к заполнению" data-parsley-pattern="\+7\s\(\d{3}\)\s\d{3}\s\d{4}" />
+                                </div>
+                            </div>
+                            <div class="quistion__col">
+                                <div class="input-box">
+                                    <label>Ваш вопрос:</label>
+                                    <textarea name="" id="" class="input" placeholder="Здравствуйте! Какой анализ выбрать, если..." data-parsley-group="basket"></textarea>
+                                </div>
+                                <div class="input-box file">
+                                    <label>Прикрепите результаты анализов:</label>
+                                    <div class="file__wrap">
+                                        <label class="file__label flex cv" for="file-result">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#clip"></use>
+                                            </svg>
+                                            Добавьте файлы (до 10)
+                                        </label>
+                                        <input type="file" id="file-result" class="file__input" multiple />
+                                    </div>
+                                </div>
+                                <div class="form__send flex cv">
+                                    <button class="btn btn-primary">Задать вопрос</button>
+                                    <p>Наш врач ответит вам в течении 24 часов на почту или в мессенджер</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    @@include('components/req/req.html', {})
+                </div>
+            </div>
+        </main>
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

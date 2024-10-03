@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Акции" })
+    <body>
+        @@include('components/header/header.html', {class:"secondary"})
+        <main class="wrapper">
+            <div class="intro" style="background-image: url('img/intro/10.png')">
+                <div class="intro__wrap flex sb cv container">
+                    <div class="intro__content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="/" class="link-hover">Главная</a></li>
+                                <li><span>Акции</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="title">Акции и специальные предложения</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt_40">
+                <section class="articles flex fw">
+                    <div class="cart-article">
+                        <a href="#" class="cart-article__img">
+                            <img src="@img/articles/prev/07.png" alt="01_img" />
+                        </a>
+
+                        <div class="cart-article__body">
+                            <a href="#" class="cart-article__name link-hover">Выезд на дом БЕСПЛАТНО</a>
+                            <div class="cart-article__prev">Наши сотрудники могут выехать к вам на адрес и взять необходимые анализы в удобное для вас время</div>
+                            <a href="#" class="cart-article__all all-link">Подробнее </a>
+                        </div>
+                    </div>
+                    <div class="cart-article">
+                        <a href="#" class="cart-article__img">
+                            <img src="@img/articles/prev/07.png" alt="02_img" />
+                        </a>
+                        <div class="cart-article__body">
+                            <a href="#" class="cart-article__name link-hover">Выезд на дом БЕСПЛАТНО</a>
+                            <div class="cart-article__prev">Наши сотрудники могут выехать к вам на адрес и взять необходимые анализы в удобное для вас время</div>
+                            <a href="#" class="cart-article__all all-link">Подробнее </a>
+                        </div>
+                    </div>
+                    <div class="cart-article">
+                        <a href="#" class="cart-article__img">
+                            <img src="@img/articles/prev/07.png" alt="03_img" />
+                        </a>
+                        <div class="cart-article__body">
+                            <a href="#" class="cart-article__name link-hover">Выезд на дом БЕСПЛАТНО</a>
+                            <div class="cart-article__prev">Наши сотрудники могут выехать к вам на адрес и взять необходимые анализы в удобное для вас время</div>
+                            <a href="#" class="cart-article__all all-link">Подробнее </a>
+                        </div>
+                    </div>
+                </section>
+                <button class="btn-more link-hover">Показать еще</button>
+                @@include('components/req/req.html', { })
+            </div>
+            @@include('components/homeCatalog/homeCatalog.html', { })
+            <div class="container">@@include('components/feedBlock/feedBlock.html', { })</div>
+            @@include('components/feedbackBlock/feedbackBlock.html', { })
+        </main>
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

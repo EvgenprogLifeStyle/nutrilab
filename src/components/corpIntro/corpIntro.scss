@@ -1,0 +1,92 @@
+.corp-intro {
+  min-height: 594rem;
+  background-image: url('../img/intro/03.png');
+  padding-top: 260rem;
+  padding-bottom: 100rem;
+
+  // @include md {
+  //   min-height: 530rem;
+  //   padding-bottom: 136rem;
+  //   background-image: url('../img/intro/02_sm.png');
+  // }
+  @include sm {
+    border-radius: 0;
+    padding-top: 330rem;
+    padding-bottom: 60rem;
+  }
+
+  // .corp-intro__overlay
+  &__overlay {
+    position: relative;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+
+  // .corp-intro__wrap
+  &__wrap {
+    color: #fff;
+
+
+
+    @include sm {
+      position: relative;
+      z-index: 2;
+    }
+
+    .spec-about {
+      max-width: 363rem;
+
+      .spec-about__wrap {
+        margin-top: 0;
+      }
+    }
+
+    .btn {
+      max-width: 280rem;
+      height: 60rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      @include md {
+        position: static;
+        margin-top: 30rem;
+      }
+
+      @include sm {
+        max-width: 100%;
+      }
+
+    }
+  }
+
+  // .corp-intro__left
+  &__left {
+    max-width: 800rem;
+    padding-bottom: 120rem;
+
+    @include md {
+      max-width: 100%;
+      padding-bottom: 32rem;
+    }
+
+  }
+
+  // .corp-intro__subtitle
+  &__subtitle {
+    font-size: 30rem;
+    text-transform: uppercase;
+    line-height: calc(38/30);
+
+    @include md {
+      font-size: 28rem;
+    }
+
+    @include sm {
+      font-size: 20rem;
+    }
+  }
+}

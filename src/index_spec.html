@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Главная" })
+    <body>
+        @@include('components/header/header.html', {})
+        <main class="wrapper pt_180">
+            <div class="container">
+                <section class="mt_60 intro-spec flex">
+                    <div class="intro-spec__banner">
+                        <img src="@img/spec_intro.png" alt="spec_intro_img" />
+                    </div>
+                    <div class="intro-spec__list">
+                        <div class="intro-spec__item">
+                            <div class="intro-spec__name title">Заявка на сотрудничество</div>
+                            <div class="intro-spec__text">Оставьте заявку и наш менеджер свяжется с вами, чтобы рассказать все подробности сотрудничества</div>
+                            <button class="intro-spec__link openPopup" data-title="Заявка на сотрудничество" data-text="Оставьте заявку и наш менеджер свяжется с вами, чтобы рассказать все подробности сотрудничества">
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#arrLink"></use>
+                                </svg>
+                                Оставить <br />
+                                заявку
+                            </button>
+                        </div>
+                        <div class="intro-spec__item">
+                            <div class="intro-spec__name title">
+                                Ваш личный <br />
+                                кабинет
+                            </div>
+                            <div class="intro-spec__text">Войдите в ваш персональный кабинет, чтобы посмотреть актуальную информацию по анализам пациентов</div>
+                            <a href="#" class="intro-spec__link">
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#arrLink"></use>
+                                </svg>
+                                Войти <br />
+                                в кабинет</a
+                            >
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @@include('components/newsSlider/newsSlider.html', {})
+            <div class="info-coop container flex cv mt_120">
+                <div class="info-coop__text">Nutrilab – первая лаборатория для нутрициологов в России, которая направлена на сотрудничество со всеми приверженцами здорового образа жизни</div>
+                <div class="info-coop__body">
+                    <p>Меньше чем за год с нами уже сотрудничают:</p>
+                    <div class="info-coop__content flex cv">
+                        <img src="@img/coop.png" alt="coop__img" />
+                        <div>
+                            <span>700+</span>
+                            <p>более 700 специалистов помогающих профессий</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @@include('components/adventCorp/adventCorp.html', { }) @@include('components/fc/fc.html', { })
+            <div class="container">@@include('components/targetBlock/targetBlock.html', {})</div>
+            @@include('components/homeCatalog/homeCatalog.html', {})
+            <section class="client container flex">
+                <div class="client__items">
+                    <div class="client__item">
+                        <div class="client__content">
+                            <p>Задайте вопрос нашим специалистам</p>
+                            <div class="client__link">Задать вопрос</div>
+                        </div>
+                        <div class="client__icon"><img src="@img/icons/messages.svg" alt="messages_icon" /></div>
+                    </div>
+                    <div class="client__item">
+                        <div class="client__content">
+                            <p>Подготовьтесь <br />к сдаче анализов</p>
+                            <div class="client__link">Читать</div>
+                        </div>
+                        <div class="client__icon"><img src="@img/icons/an.svg" alt="an_video" /></div>
+                    </div>
+                </div>
+                <div class="client__img">
+                    <img src="@img/client.png" alt="client_img" />
+                </div>
+            </section>
+            @@include('components/homeAbout/homeAbout.html', {}) @@include('components/feedbackBlock/feedbackBlock.html', {})
+        </main>
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

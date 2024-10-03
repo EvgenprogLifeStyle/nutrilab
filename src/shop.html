@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Интернет-магазин" })
+    <body>
+        @@include('components/header/header.html', {class:"secondary"})
+        <main class="wrapper">
+            <div class="intro" style="background-image: url('img/intro/04.png')">
+                <div class="intro__wrap flex sb cv container">
+                    <div class="intro__content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="/" class="link-hover">Главная</a></li>
+                                <li><span>Интернет-магазин</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="title">Интернет-магазин</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="shop mt_40 container">
+                <form class="search-filter flex cv">
+                    <button class="search-filter__send flex-cc">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                    <input type="text" class="search-filter__input" placeholder="Например, книга" />
+                </form>
+                <div class="tabs">
+                    <div class="tabs__slider _swiper flex">
+                        <div class="tabs__tab _tab-btn active" data-id="0">Все</div>
+                        <div class="tabs__tab _tab-btn" data-id="1">Книги</div>
+                        <div class="tabs__tab _tab-btn" data-id="2">Методические материалы</div>
+                        <div class="tabs__tab _tab-btn" data-id="3">Мерч</div>
+                    </div>
+                </div>
+                <!-- <div class="filter__body">
+                
+                    <div class="filter__list">
+                        <div class="filter__item _tab-item active" data-subname="По разделам:" data-id="0">
+                            <div class="filter__subtitle">Разделы:</div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="shop__list flex fw">
+                    <div class="cart-shop _tab-item" data-id="1">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/01.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Книга</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-shop _tab-item" data-id="1">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/01.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Книга</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-shop _tab-item" data-id="2">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/02.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Методичка</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-shop _tab-item" data-id="3">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/03.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Футболка</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-shop _tab-item" data-id="1">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/01.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Книга</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-shop _tab-item" data-id="1">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/01.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Книга</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-shop _tab-item" data-id="2">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/02.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Методичка</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-shop _tab-item" data-id="3">
+                        <div class="cart-shop__type">Книга</div>
+                        <a href="#" class="cart-shop__img">
+                            <img src="@img/shop/prev/03.png" alt="prev_img" />
+                        </a>
+                        <div class="cart-shop__body">
+                            <a href="#" class="cart-shop__name link-hover">Футболка</a>
+                            <ul>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-shop__btns flex">
+                                <a href="#" class="btn btn-outline">Подробнее</a>
+                                <button class="btn btn-primary cart-shop__basket">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagin flex ch cv">
+                    <a href="#" class="pagin__btn pagin__btn_prev btn btn-outline-gray disabled">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#arrDots"></use>
+                        </svg>
+                        Назад</a
+                    >
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#" class="sm">3</a>
+                    <a href="#">...</a>
+                    <a href="#">28</a>
+                    <a href="#" class="pagin__btn pagin__btn_next btn btn-outline-gray"
+                        ><svg class="icon">
+                            <use xlink:href="img/sprite.svg#arrDots"></use></svg
+                        >Вперед</a
+                    >
+                </div>
+            </div>
+        </main>
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

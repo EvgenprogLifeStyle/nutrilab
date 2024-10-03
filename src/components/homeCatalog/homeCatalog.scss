@@ -1,0 +1,275 @@
+.home-catalog {
+  overflow: hidden;
+
+  // .home-catalog__slider
+  &__slider {
+    margin-top: 20rem;
+
+    @include sm {
+      margin-top: 10rem;
+    }
+
+    // margin-left: -40rem;
+    // padding-left: 40rem;
+    // margin-right: -40rem;
+    // width: calc(100% + 40rem);
+
+  }
+}
+
+
+.top-hc {
+  background: #F8F9F8;
+  border-radius: 30rem;
+  padding: 95rem 0 60rem 60rem;
+  position: relative;
+  margin-top: 84rem;
+  overflow: hidden;
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    padding: 30rem 20rem 0;
+    border-radius: 20rem;
+  }
+
+  // .top-hc__content
+  &__content {
+    max-width: 400rem;
+
+    @include md {
+      max-width: 100%;
+    }
+
+    h3 {
+      margin-top: 20rem;
+      font-size: 40rem;
+
+      @include md {
+        font-size: 32rem;
+        margin-top: 10rem;
+      }
+
+      @include sm {
+        font-size: 30rem;
+      }
+    }
+  }
+
+  // .top-hc__img
+  &__img {
+    width: 700rem;
+    position: absolute;
+    bottom: 0px;
+    right: 100rem;
+
+    @include md {
+      width: 100%;
+      position: static;
+      margin-top: 0;
+    }
+
+    @include sm {
+      width: 150%;
+      margin-left: -20%;
+      margin-top: -24rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .top-hc__link
+  &__link {
+    position: absolute;
+    right: 30rem;
+    bottom: 30rem;
+
+    @include md {
+      position: static;
+      margin-top: 30px;
+      display: inline-flex;
+    }
+  }
+}
+
+.cart-product {
+  background: #F8F9F8;
+  border-radius: 15rem;
+  padding: 30rem;
+  width: 320rem !important;
+  display: flex;
+  flex-direction: column;
+
+  @include md {
+    padding: 12rem;
+  }
+
+  @include sm {
+    border-radius: 20rem;
+    padding: 30rem;
+  }
+
+  &.cart-product_min {
+    background: #fff;
+
+
+    .cart-product__sections {
+
+      div,
+      a {
+        background: #F4F1E8;
+      }
+    }
+
+    .cart-product__name {
+      height: 80rem;
+      font-size: 20rem;
+    }
+
+    ul {
+      margin-top: 28rem;
+
+      li {
+        div {
+          &:first-child {
+            font-size: 12rem;
+          }
+
+          &:last-child {
+            font-size: 16rem;
+          }
+        }
+      }
+    }
+
+    .btn.btn.btn-outline {
+      width: 100%;
+    }
+  }
+
+  // .cart-product__sections
+  &__sections {
+    gap: 10rem;
+
+    div,
+    a {
+      height: 30rem;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 100rem;
+      padding: 0px 22rem;
+      font-size: 14rem;
+      font-weight: 500;
+      color: #8F9CA5;
+      background: #fff;
+    }
+  }
+
+  // .cart-product__name
+  &__name {
+    margin-top: 20rem;
+    font-size: 24rem;
+    display: inline-flex;
+    height: 100rem;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 500;
+
+    @include sm {
+      font-size: 20rem;
+      height: 80rem;
+    }
+  }
+
+  ul {
+    flex: 1 1 auto;
+    margin-top: 32rem;
+
+    @include sm {
+      margin-top: 30rem;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20rem;
+
+      &:not(:last-child) {
+        margin-bottom: 15rem;
+
+        @include sm {
+          margin-bottom: 10rem;
+        }
+      }
+
+      div {
+        font-weight: 500;
+        flex: 0 0 calc(50% - 10rem);
+
+
+        &:first-child {
+          font-size: 14rem;
+          color: #8F9CA5;
+
+          @include sm {
+            font-size: 12rem;
+          }
+        }
+
+        &:last-child {
+          font-size: 20rem;
+          text-align: right;
+
+          @include sm {
+            font-size: 16rem;
+          }
+        }
+      }
+    }
+  }
+
+  // .cart-product__btns
+  &__btns {
+    margin-top: 30rem;
+    gap: 10rem;
+
+    .btn {
+      height: 60rem;
+
+      &.btn-outline {
+        width: calc(66% - 5rem);
+        flex-shrink: 0;
+
+        @include sm {
+          font-size: 14rem;
+        }
+      }
+
+      &.btn-primary {
+        width: 100%;
+
+        @include sm {
+          svg {
+            width: 20rem;
+            height: auto;
+            max-height: 24rem;
+          }
+        }
+      }
+    }
+  }
+
+  // .cart-product__basket
+  &__basket {
+    .icon {
+      width: 25rem;
+      height: auto;
+      max-height: 30rem;
+    }
+  }
+}

@@ -1,0 +1,219 @@
+<div class="filter">
+    <button class="filter__btn btn btn-primary">
+        Фильтр
+        <span>
+            <img src="@img/icons/filter.svg" alt="filter_icon" />
+        </span>
+    </button>
+    <form class="search-filter flex cv">
+        <button class="search-filter__send flex-cc">
+            <svg class="icon">
+                <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+        </button>
+        <input type="text" class="search-filter__input" placeholder="Например, пищевая непереносимость" />
+    </form>
+    <div class="filter__tabs flex fw">
+        <button class="filter__tab _tab-btn active" data-id="0">По разделам</button>
+        <button class="filter__tab _tab-btn" data-id="1">По органам</button>
+        <button class="filter__tab _tab-btn" data-id="2">Нутри-чекапы</button>
+        <a href="#" class="filter__tab">Популярные исследования</a>
+    </div>
+    <div class="filter__body">
+        <div class="filter__top">
+            <h4>Фильтр</h4>
+            <button class="_close">
+                <svg class="icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="filter__list">
+            <div class="filter__item active" data-subname="По разделам:" data-id="0">
+                <div class="filter__subtitle">Разделы:</div>
+                <div class="filter__wrap">
+                    <ul>
+                        <li><a href="#" class="in">Общеклинические исследования</a></li>
+                        <li><a href="#">Оценка репродуктивного статуса и стероидогенеза</a></li>
+                        <li><a href="#">Диагностика инфекций</a></li>
+                        <li class="filter-drop">
+                            <div class="filter-drop__name">Биохимические исследования</div>
+                            <div class="filter-drop__list">
+                                <button></button>
+                                <ul>
+                                    <li><a href="#">Оценка функции печени</a></li>
+                                    <li><a href="#">Специфические белки крови</a></li>
+                                    <li><a href="#">Оценка обеспеченности железом</a></li>
+                                    <li><a href="#">Оценка функции поджелудочной железы</a></li>
+                                    <li><a href="#">Оценка липидного обмена</a></li>
+                                    <li><a href="#">Оценка минерального обмена</a></li>
+                                    <li><a href="#">Оценка функции почек</a></li>
+                                    <li><a href="#">Оценка углеводного обмена</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Оценка уровня гормонов надпочечников, почек и ЖКТ</a></li>
+                        <li><a href="#">Генетика</a></li>
+                        <li><a href="#">Оценка обеспеченности микроэлементами</a></li>
+                        <li><a href="#">Аллергодиагностика</a></li>
+                        <li><a href="#">Токсикология</a></li>
+                        <li><a href="#">Оценка обеспеченности витаминами</a></li>
+                        <li><a href="#">Аутоиммунная диагностика</a></li>
+                        <li><a href="#">Лекарственный мониторинг</a></li>
+                        <li><a href="#">Определение уровня онкомаркеров</a></li>
+                        <li><a href="#">Оценка свертывающей системы</a></li>
+                        <li><a href="#">Метаболомика</a></li>
+                        <li><a href="#">Оценка функции щитовидной железы</a></li>
+                        <li><a href="#">Изосерология (группа крови и резус фактор)</a></li>
+                        <li class="filter-drop">
+                            <div class="filter-drop__name">НУТРИ-ЧЕКАПЫ</div>
+                            <div class="filter-drop__list">
+                                <button></button>
+                                <ul>
+                                    <li><a href="#">Пункт 1</a></li>
+                                    <li><a href="#">Пункт 2</a></li>
+                                    <li><a href="#">Пункт 3</a></li>
+                                    <li><a href="#">Пункт 4</a></li>
+                                    <li><a href="#">Пункт 5</a></li>
+                                    <li><a href="#">Пункт 6</a></li>
+                                    <li><a href="#">Пункт 7</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter__item" data-subname="По органам:" data-id="1">
+                <div class="filter__subtitle">11Разделы:</div>
+                <div class="filter__wrap">
+                    <ul>
+                        <li><a href="#" class="in">Общеклинические исследования</a></li>
+                        <li><a href="#">Оценка репродуктивного статуса и стероидогенеза</a></li>
+                        <li><a href="#">Диагностика инфекций</a></li>
+                        <li class="filter-drop">
+                            <div class="filter-drop__name">Биохимические исследования</div>
+                            <div class="filter-drop__list">
+                                <button></button>
+                                <ul>
+                                    <li><a href="#">Оценка функции печени</a></li>
+                                    <li><a href="#">Специфические белки крови</a></li>
+                                    <li><a href="#">Оценка обеспеченности железом</a></li>
+                                    <li><a href="#">Оценка функции поджелудочной железы</a></li>
+                                    <li><a href="#">Оценка липидного обмена</a></li>
+                                    <li><a href="#">Оценка минерального обмена</a></li>
+                                    <li><a href="#">Оценка функции почек</a></li>
+                                    <li><a href="#">Оценка углеводного обмена</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Оценка уровня гормонов надпочечников, почек и ЖКТ</a></li>
+                        <li><a href="#">Генетика</a></li>
+                        <li><a href="#">Оценка обеспеченности микроэлементами</a></li>
+                        <li><a href="#">Аллергодиагностика</a></li>
+                        <li><a href="#">Токсикология</a></li>
+                        <li><a href="#">Оценка обеспеченности витаминами</a></li>
+                        <li><a href="#">Аутоиммунная диагностика</a></li>
+                        <li><a href="#">Лекарственный мониторинг</a></li>
+                        <li><a href="#">Определение уровня онкомаркеров</a></li>
+                        <li><a href="#">Оценка свертывающей системы</a></li>
+                        <li><a href="#">Метаболомика</a></li>
+                        <li><a href="#">Оценка функции щитовидной железы</a></li>
+                        <li><a href="#">Изосерология (группа крови и резус фактор)</a></li>
+                        <li class="filter-drop">
+                            <div class="filter-drop__name">НУТРИ-ЧЕКАПЫ</div>
+                            <div class="filter-drop__list">
+                                <button></button>
+                                <ul>
+                                    <li><a href="#">Пункт 1</a></li>
+                                    <li><a href="#">Пункт 2</a></li>
+                                    <li><a href="#">Пункт 3</a></li>
+                                    <li><a href="#">Пункт 4</a></li>
+                                    <li><a href="#">Пункт 5</a></li>
+                                    <li><a href="#">Пункт 6</a></li>
+                                    <li><a href="#">Пункт 7</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter__item" data-subname="Нутри-чекапы:" data-id="2">
+                <div class="filter__subtitle">22Разделы:</div>
+                <div class="filter__wrap">
+                    <ul>
+                        <li><a href="#" class="in">Общеклинические исследования</a></li>
+                        <li><a href="#">Оценка репродуктивного статуса и стероидогенеза</a></li>
+                        <li><a href="#">Диагностика инфекций</a></li>
+                        <li class="filter-drop">
+                            <div class="filter-drop__name">Биохимические исследования</div>
+                            <div class="filter-drop__list">
+                                <button></button>
+                                <ul>
+                                    <li><a href="#">Оценка функции печени</a></li>
+                                    <li><a href="#">Специфические белки крови</a></li>
+                                    <li><a href="#">Оценка обеспеченности железом</a></li>
+                                    <li><a href="#">Оценка функции поджелудочной железы</a></li>
+                                    <li><a href="#">Оценка липидного обмена</a></li>
+                                    <li><a href="#">Оценка минерального обмена</a></li>
+                                    <li><a href="#">Оценка функции почек</a></li>
+                                    <li><a href="#">Оценка углеводного обмена</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Оценка уровня гормонов надпочечников, почек и ЖКТ</a></li>
+                        <li><a href="#">Генетика</a></li>
+                        <li><a href="#">Оценка обеспеченности микроэлементами</a></li>
+                        <li><a href="#">Аллергодиагностика</a></li>
+                        <li><a href="#">Токсикология</a></li>
+                        <li><a href="#">Оценка обеспеченности витаминами</a></li>
+                        <li><a href="#">Аутоиммунная диагностика</a></li>
+                        <li><a href="#">Лекарственный мониторинг</a></li>
+                        <li><a href="#">Определение уровня онкомаркеров</a></li>
+                        <li><a href="#">Оценка свертывающей системы</a></li>
+                        <li><a href="#">Метаболомика</a></li>
+                        <li><a href="#">Оценка функции щитовидной железы</a></li>
+                        <li><a href="#">Изосерология (группа крови и резус фактор)</a></li>
+                        <li class="filter-drop">
+                            <div class="filter-drop__name">НУТРИ-ЧЕКАПЫ</div>
+                            <div class="filter-drop__list">
+                                <button></button>
+                                <ul>
+                                    <li><a href="#">Пункт 1</a></li>
+                                    <li><a href="#">Пункт 2</a></li>
+                                    <li><a href="#">Пункт 3</a></li>
+                                    <li><a href="#">Пункт 4</a></li>
+                                    <li><a href="#">Пункт 5</a></li>
+                                    <li><a href="#">Пункт 6</a></li>
+                                    <li><a href="#">Пункт 7</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="filter__popular">Популярные анализы</a>
+            <div class="filter__item filter-result flex sb">
+                <div class="filter-result__list flex fw">
+                    <div class="filter-result__item">
+                        Общеклинические исследования
+                        <button>
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <a href="#" class="filter-result__close flex cv link-hover">
+                    Вернуться к фильтрам
+                    <svg class="icon">
+                        <use xlink:href="img/sprite.svg#arrCloseFilter"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="filter__bottom">
+            <button class="btn btn-secondary">Применить</button>
+            <button class="btn btn-outline-gray">Сбросить</button>
+        </div>
+    </div>
+</div>

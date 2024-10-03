@@ -1,0 +1,40 @@
+<div class="feed-block mt_120">
+    <div class="feed-block__nutri">
+        <div class="feed-block__text center">
+            Необходима помощь <br />
+            с заказом?
+        </div>
+        <div class="feed-block__img">
+            <img src="@img/nutri_form.png" alt="nutri_form" />
+        </div>
+    </div>
+
+    <form action="" class="feed-block__form" data-parsley-validate>
+        <h3 class="feed-block__title title">Оставьте свои контакты и мы с Вами свяжемся</h3>
+        <div class="feed-block__wrap">
+            <div class="feed-block__row flex">
+                <div class="input-box">
+                    <label>Ваше имя:</label>
+                    <input type="text" class="input-box__input" placeholder="Иван" required data-parsley-required-message="Поле обязательно для заполнения" data-parsley-minlength="3" data-parsley-group="basket" />
+                </div>
+
+                <div class="input-box">
+                    <label>Ваша почта:</label>
+                    <input type="text" class="input-box__input" placeholder="example@gmail.com" required data-parsley-required-message="Поле обязательно для заполнения" data-parsley-type="email" data-parsley-group="basket" />
+                </div>
+
+                <div class="input-box">
+                    <label>Ваш телефон:</label>
+                    <input type="text" class="input-box__input phone" placeholder="+7 (999) 999 00 99" required data-parsley-required-message="Поле обязательно к заполнению" data-parsley-pattern="\+7\s\(\d{3}\)\s\d{3}\s\d{4}" data-parsley-group="basket" data-parsley-group="basket" />
+                </div>
+            </div>
+            <div class="feed-block__bottom flex cv sb">
+                <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="agree" required />
+                    <span class="checkbox__text">Согласен с Политикой конфиденциальности </span>
+                </label>
+                <button class="btn btn-primary">Отправить</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Детальная карточка" })
+    <body>
+        @@include('components/header/header.html', {})
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap" type="text/javascript"></script>
+        <main class="wrapper pt_180">
+            <div class="breadcrumbs">
+                <ul class="container">
+                    <li><a href="/" class="link-hover">Главная</a></li>
+                    <li><a href="/" class="link-hover">Анализы</a></li>
+                    <li><span>Общий иммуноглобулин E (IgE)</span></li>
+                </ul>
+            </div>
+            <div class="dp mt_40">
+                <div class="container">
+                    <div class="dp__top flex">
+                        <h1 class="title">Аллергочип, ImmunoCAP ISAC (112 компонентов)</h1>
+                        <div class="badles-dp flex fw">
+                            <div class="badles-dp__item badles-dp__item_art">
+                                Код:
+                                <span>AL001</span>
+                            </div>
+                            <div class="badles-dp__item">
+                                <div><img src="@img/icons/check.svg" alt="check_icon" /></div>
+                                На дому
+                            </div>
+                            <div class="badles-dp__item">
+                                <div><img src="@img/icons/check.svg" alt="check_icon" /></div>
+                                В офисе
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp__wrap flex">
+                        <div class="offer-dp flex dc">
+                            <a href="#" class="offer-dp__item link-hover">
+                                <div class="offer-dp__text">
+                                    Пример <br />
+                                    результата
+                                </div>
+                                <div class="offer-dp__img">
+                                    <img src="@img/product/detail_01.png" alt="detail_01_img" />
+                                </div>
+                            </a>
+                            <a href="#" class="offer-dp__item link-hover">
+                                <div class="offer-dp__text">
+                                    Подготовка <br />
+                                    к анализам
+                                </div>
+                                <div class="offer-dp__img">
+                                    <img src="@img/product/detail_02.png" alt="detail_02_img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="info-dp">
+                            <button class="info-dp__help">
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#info"></use>
+                                </svg>
+                            </button>
+                            <ul>
+                                <li>
+                                    <div>Сроки исполнения:</div>
+                                    <div>23 дня</div>
+                                </li>
+                                <li>
+                                    <div>Метод:</div>
+                                    <div>Иммунофлюоресценция на трехмерной пористой твердой фазе (ImmunoCAP)</div>
+                                </li>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь с ЭДТА</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="order-dp">
+                            <small class="smallText">Стоимость:</small>
+                            <div class="price-dp">
+                                <div class="price-dp__origin">44 980 руб.</div>
+                                <div class="flex cv price-one">
+                                    <div class="price-one__text flex cv">
+                                        <div><img src="@img/icons/split.svg" alt="split_icon" /></div>
+                                        <span>11 245 ₽</span>
+                                    </div>
+                                    <div class="price-one__count">х 4 платежа в Сплит</div>
+                                </div>
+                                <div class="price-dp__bottom flex cv sb">
+                                    <span>Взятие биоматериала:</span>
+                                    <div>231 ₽</div>
+                                </div>
+                                <button class="price-dp__btn btn btn-primary">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-dp flex mt_60">
+                        <div class="tabs-dp__btns flex dc _swiper">
+                            <button class="tabs-dp__btn tab-btn link-hover active" data-id="0">Описание</button>
+                            <button class="tabs-dp__btn tab-btn link-hover" data-id="1">Состав анализа</button>
+                            <button class="tabs-dp__btn tab-btn link-hover" data-id="2">Интерпретация</button>
+                            <button class="tabs-dp__btn tab-btn link-hover" data-id="3">Дополнительно</button>
+                        </div>
+                        <div class="tabs-dp__body">
+                            <div class="tabs-dp__item tab-item text active" data-id="0">
+                                <p>Основанный на ультрасовременной технологии биочипов "Аллергочип ImmunoCAP ISAC (112 аллергокомпонентов)" – это миниатюрная платформа для иммунологического анализа, предназначенная для комплексного измерения специфических IgE-антител более чем к сотне аллергокомпонентов одновременно по 30 мкл сыворотки крови. В состав теста включены аллергокомпоненты, выделенные из пищевых, пыльцевых, эпидермальных аллергенов, аллергенов животных, аллергенов плесневых грибов и насекомых (представлены различные компонентов из 51 аллергенного источника).</p>
+                                <h3>Показания:</h3>
+                                <p>Для первичной диагностики аллергических заболеваний. Для скринингового выявления сенсибилизации к широкому спектру аллергенов. Для выявления истинной или перекрестной сенсибилизации — при необходимости аллергокомпонентной диагностики. Для выбора пациентов для аллергенспецифической иммунотерапии (АСИТ) и прогнозирования ее эффективности.</p>
+                            </div>
+                            <div class="tabs-dp__item tab-item text" data-id="1">
+                                1
+                                <p>Основанный на ультрасовременной технологии биочипов "Аллергочип ImmunoCAP ISAC (112 аллергокомпонентов)" – это миниатюрная платформа для иммунологического анализа, предназначенная для комплексного измерения специфических IgE-антител более чем к сотне аллергокомпонентов одновременно по 30 мкл сыворотки крови. В состав теста включены аллергокомпоненты, выделенные из пищевых, пыльцевых, эпидермальных аллергенов, аллергенов животных, аллергенов плесневых грибов и насекомых (представлены различные компонентов из 51 аллергенного источника).</p>
+                                <h3>Показания:</h3>
+                                <p>Для первичной диагностики аллергических заболеваний. Для скринингового выявления сенсибилизации к широкому спектру аллергенов. Для выявления истинной или перекрестной сенсибилизации — при необходимости аллергокомпонентной диагностики. Для выбора пациентов для аллергенспецифической иммунотерапии (АСИТ) и прогнозирования ее эффективности.</p>
+                            </div>
+                            <div class="tabs-dp__item tab-item text" data-id="2">
+                                2
+                                <p>Основанный на ультрасовременной технологии биочипов "Аллергочип ImmunoCAP ISAC (112 аллергокомпонентов)" – это миниатюрная платформа для иммунологического анализа, предназначенная для комплексного измерения специфических IgE-антител более чем к сотне аллергокомпонентов одновременно по 30 мкл сыворотки крови. В состав теста включены аллергокомпоненты, выделенные из пищевых, пыльцевых, эпидермальных аллергенов, аллергенов животных, аллергенов плесневых грибов и насекомых (представлены различные компонентов из 51 аллергенного источника).</p>
+                                <h3>Показания:</h3>
+                                <p>Для первичной диагностики аллергических заболеваний. Для скринингового выявления сенсибилизации к широкому спектру аллергенов. Для выявления истинной или перекрестной сенсибилизации — при необходимости аллергокомпонентной диагностики. Для выбора пациентов для аллергенспецифической иммунотерапии (АСИТ) и прогнозирования ее эффективности.</p>
+                            </div>
+                            <div class="tabs-dp__item tab-item text" data-id="3">
+                                3
+                                <p>Основанный на ультрасовременной технологии биочипов "Аллергочип ImmunoCAP ISAC (112 аллергокомпонентов)" – это миниатюрная платформа для иммунологического анализа, предназначенная для комплексного измерения специфических IgE-антител более чем к сотне аллергокомпонентов одновременно по 30 мкл сыворотки крови. В состав теста включены аллергокомпоненты, выделенные из пищевых, пыльцевых, эпидермальных аллергенов, аллергенов животных, аллергенов плесневых грибов и насекомых (представлены различные компонентов из 51 аллергенного источника).</p>
+                                <h3>Показания:</h3>
+                                <p>Для первичной диагностики аллергических заболеваний. Для скринингового выявления сенсибилизации к широкому спектру аллергенов. Для выявления истинной или перекрестной сенсибилизации — при необходимости аллергокомпонентной диагностики. Для выбора пациентов для аллергенспецифической иммунотерапии (АСИТ) и прогнозирования ее эффективности.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compound-dp flex cv">
+                        <div class="compound-dp__content">
+                            <h2>Этот анализ входит<span>в Комплекс</span></h2>
+                            <p>Врачи часто назначают именно комплекс анализов, чтобы видеть полную картину вашего здоровья.</p>
+                            <p>Мы подобрали для вас несколько комплексов с выбранным анализом:</p>
+                        </div>
+                        <div class="compound-dp__products flex _swiper">
+                            <div class="cart-product cart-product_min">
+                                <div class="cart-product__sections flex">
+                                    <div>Nutri11</div>
+                                </div>
+                                <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                                <ul>
+                                    <li>
+                                        <div>Срок исполнения:</div>
+                                        <div>12 дн</div>
+                                    </li>
+                                    <li>
+                                        <div>Стоимость</div>
+                                        <div>5 210 ₽</div>
+                                    </li>
+                                </ul>
+                                <div class="cart-product__btns flex">
+                                    <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="cart-product cart-product_min">
+                                <div class="cart-product__sections flex">
+                                    <div>Nutri11</div>
+                                </div>
+                                <a href="#" class="cart-product__name link-hover">Диагностика пищевой непереносимости IgG4 (96 аллергенов и микстов аллергенов)</a>
+                                <ul>
+                                    <li>
+                                        <div>Срок исполнения:</div>
+                                        <div>12 дн</div>
+                                    </li>
+                                    <li>
+                                        <div>Стоимость</div>
+                                        <div>5 210 ₽</div>
+                                    </li>
+                                </ul>
+                                <div class="cart-product__btns flex">
+                                    <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="cart-product cart-product_min">
+                                <div class="cart-product__sections flex">
+                                    <div>Nutri11</div>
+                                </div>
+                                <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                                <ul>
+                                    <li>
+                                        <div>Срок исполнения:</div>
+                                        <div>12 дн</div>
+                                    </li>
+                                    <li>
+                                        <div>Стоимость</div>
+                                        <div>5 210 ₽</div>
+                                    </li>
+                                </ul>
+                                <div class="cart-product__btns flex">
+                                    <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slider">
+                    <div class="container">
+                        <h2 class="subtitle">С этим анализом часто назначают:</h2>
+                    </div>
+                    <div class="product-slider__items flex _swiper">
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Диагностика пищевой непереносимости IgG4 (96 аллергенов и микстов аллергенов)</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Диагностика пищевой непереносимости IgG4 (96 аллергенов и микстов аллергенов)</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Диагностика пищевой непереносимости IgG4 (96 аллергенов и микстов аллергенов)</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Диагностика пищевой непереносимости IgG4 (96 аллергенов и микстов аллергенов)</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-product">
+                            <div class="cart-product__sections flex">
+                                <div>Комплекс</div>
+                                <div>Nutri11</div>
+                            </div>
+                            <a href="#" class="cart-product__name link-hover">Чекап кислотности желудочного сока</a>
+                            <ul>
+                                <li>
+                                    <div>Биоматериал:</div>
+                                    <div>Кровь</div>
+                                </li>
+                                <li>
+                                    <div>Срок исполнения:</div>
+                                    <div>12 дн</div>
+                                </li>
+                                <li>
+                                    <div>Стоимость</div>
+                                    <div>5 210 ₽</div>
+                                </li>
+                            </ul>
+                            <div class="cart-product__btns flex">
+                                <a href="#" class="btn btn-outline swiper-no-swiping">Подробнее</a>
+                                <button class="btn btn-primary cart-product__basket swiper-no-swiping">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#basket"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-block container mt_120 flex">
+                    <div id="map" class="contact-block__map"></div>
+
+                    <div class="contact-block__content flex dc">
+                        <div class="contact-block__wrap flex dc">
+                            <h2 class="subtitle">Адреса медицинских офисов</h2>
+                            <div class="contact-block__thumbs _swiper">
+                                <div class="contact-block__thumb active" data-coor="[55.768821, 37.601223]"><img src="@img/contacts/thumb_01.png" alt="thumb_01" /></div>
+                                <div class="contact-block__thumb" data-coor="[55.768821, 36.601223]"><img src="@img/contacts/thumb_02.png" alt="thumb_02" /></div>
+                            </div>
+                            <div class="contact-block__slider _swiper">
+                                <div class="contact-block__slide">
+                                    <div class="contact-block__name">Chromolab Маяковская</div>
+                                    <div class="contact-block__text text">
+                                        <p>г. Москва, Старопименовский пер., 6</p>
+                                        <a href="tel:+74953693309">+7 (495) 369-33-09</a>
+                                    </div>
+                                </div>
+                                <div class="contact-block__slide">
+                                    <div class="contact-block__name">1Chromolab Маяковская</div>
+                                    <div class="contact-block__text text">
+                                        <p>г. Москва, Старопименовский пер., 6</p>
+                                        <a href="tel:+74953693309">+7 (495) 369-33-09</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="departure" data-da=".contact-block,1023">
+                            <div class="flex ac sb">
+                                <div class="departure__text">
+                                    <h5>Не нашли офиса рядом?</h5>
+                                    <p>Закажите услугу “Выезд на дом”</p>
+                                </div>
+                                <button class="btn btn-primary">Заказать выезд</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var myMap;
+                    function maps(coor) {
+                        if (document.getElementById("map")) {
+                            ymaps.ready(init);
+
+                            function init() {
+                                myMap = new ymaps.Map("map", {
+                                    center: coor, // центральная точка
+                                    zoom: 14,
+                                    controls: []
+                                });
+                                myMap.behaviors.disable("scrollZoom");
+                                myMap.options.set("scrollZoomSpeed", 0);
+
+                                var zoomControl = new ymaps.control.ZoomControl({
+                                    options: {
+                                        size: "small",
+                                        float: "top"
+                                    }
+                                });
+                                myMap.controls.add(zoomControl);
+
+                                myPlacemark = new ymaps.Placemark(
+                                    coor,
+                                    { iconCaption: "" },
+                                    {
+                                        preset: "islands#redIcon"
+                                    }
+                                );
+
+                                myMap.events.add("click", function () {
+                                    myMap.behaviors.enable("scrollZoom");
+                                });
+                                myMap.geoObjects.add(myPlacemark);
+                            }
+                        }
+                    }
+                    maps([55.768821, 37.601223]);
+
+                    document.addEventListener(
+                        "DOMContentLoaded",
+                        function () {
+                            document.querySelectorAll(".contact-block__thumb").forEach((e) =>
+                                e.addEventListener("click", () => {
+                                    myMap.destroy();
+                                    myMap = null;
+                                    maps(JSON.parse(e.dataset.coor));
+                                })
+                            );
+                        },
+                        false
+                    );
+                </script>
+            </div>
+        </main>
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

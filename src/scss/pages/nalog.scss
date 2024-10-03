@@ -1,0 +1,147 @@
+.nalog {
+  margin-top: 60rem;
+  gap: 40rem;
+
+  @include lg {
+    margin-top: 60rem;
+    gap: 20rem
+  }
+
+  @include md {
+    flex-direction: column;
+    margin-top: 30rem;
+  }
+
+  // .nalog__content
+  &__content {
+    width: calc(50% - 20rem);
+
+    @include lg {
+      width: calc(50% - 10rem);
+    }
+
+    @include md {
+      width: 100%;
+      padding: 0rem 20rem;
+    }
+
+    p {
+      font-size: 20rem;
+      color: #2a2c36;
+      margin: 0;
+
+      @include lg {
+        font-size: 18rem;
+      }
+
+      @include sm {
+        font-size: 16rem;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 26rem;
+
+        @include lg {
+          margin-bottom: 20rem;
+        }
+      }
+    }
+
+    div {
+      margin-top: 40rem;
+      padding-left: 100rem;
+      margin-bottom: 20rem;
+
+      @include lg {
+        margin-top: 30rem;
+        padding-left: 20%;
+        margin-bottom: 20rem;
+      }
+
+      @include sm {
+        padding-left: 10%;
+      }
+
+      h3 {
+        font-size: 30rem;
+        color: #2a2c36;
+        margin-bottom: 0;
+
+        @include lg {
+          font-size: 24rem;
+        }
+
+        @include sm {
+          font-size: 20rem;
+        }
+      }
+
+      img {
+        width: 380rem;
+
+        @include lg {
+          width: 80%;
+        }
+
+        @include md {
+          width: 380rem;
+        }
+
+        @include sm {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  // .nalog__form
+  &__form {
+    width: calc(50% - 20rem);
+    background: #f4f5f9;
+    border-radius: 30rem;
+    padding: 60rem;
+
+    @include lg {
+      width: calc(50% - 10rem);
+      padding: 40rem;
+      border-radius: 30rem;
+    }
+
+    @include md {
+      width: 100%;
+    }
+
+    @include sm {
+      padding: 30rem 20rem 30rem;
+    }
+
+    .input-box {
+      &:not(:last-child) {
+        margin-bottom: 20rem;
+      }
+    }
+
+    ul {
+      padding-left: 32rem;
+
+      li {
+        list-style: disc;
+        color: #294456;
+      }
+    }
+
+    .btn {
+      width: 360rem;
+      margin-top: 30rem;
+
+      @include lg {
+        width: 360rem;
+        margin-top: 30rem;
+      }
+
+      @include sm {
+        width: 100%;
+      }
+    }
+  }
+}

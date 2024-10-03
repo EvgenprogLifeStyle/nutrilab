@@ -1,0 +1,146 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.flex {
+  display: flex;
+}
+
+.i-flex {
+  display: inline-flex;
+}
+
+.cv {
+  align-items: center;
+}
+
+.ch {
+  justify-content: center;
+}
+
+.sb {
+  justify-content: space-between;
+}
+
+.sa {
+  justify-content: space-around;
+}
+
+.as {
+  align-items: flex-start;
+}
+
+.js {
+  justify-content: flex-start;
+}
+
+.je {
+  justify-content: flex-end;
+}
+
+.fe {
+  align-items: flex-end;
+}
+
+.fw {
+  flex-wrap: wrap;
+}
+
+.dc {
+  flex-direction: column;
+}
+
+.flex-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.bg-i {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &.contain {
+    background-size: contain;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+// Margin
+.mt_10 {
+  margin-top: 10px;
+}
+
+.mb_20 {
+  margin-bottom: 20rem;
+}
+
+.mt_20 {
+  margin-top: 20rem;
+
+  @include sm {
+    margin-top: 10rem;
+  }
+}
+
+.mt_60 {
+  margin-top: 60rem;
+
+  @include sm {
+    margin-top: 30rem;
+  }
+}
+
+.mt_78 {
+  margin-top: 78rem;
+
+  @include md {
+    margin-top: 60rem;
+  }
+}
+
+.mt_120 {
+  margin-top: 120rem;
+
+  @include md {
+    margin-top: 80rem;
+  }
+
+  @include sm {
+    margin-top: 60rem;
+  }
+}
+
+//Padding
+.pt_32 {
+  padding-top: 32px;
+
+  @include lg {
+    padding-top: 24px;
+  }
+}

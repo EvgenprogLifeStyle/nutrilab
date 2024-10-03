@@ -1,0 +1,122 @@
+.home-adv {
+
+  // .home-adv__wrap
+  &__wrap {
+    padding-left: 60rem;
+    padding-right: 60rem;
+    gap: 140rem;
+
+    @include md {
+      gap: 32rem;
+      padding-left: 20rem;
+      padding-right: 20rem;
+      flex-direction: column;
+    }
+  }
+
+  // .home-adv__content
+  &__content {
+    width: 500rem;
+    flex-shrink: 0;
+
+    @include md {
+      width: 100%
+    }
+
+    h2 {
+      font-size: 40rem;
+
+      @include md {
+        font-size: 36rem;
+      }
+
+      @include sm {
+        font-size: 30rem;
+      }
+    }
+
+    p {
+      margin-top: 20rem;
+      font-size: 20rem;
+
+      @include md {
+        font-size: 16rem;
+      }
+
+      @include sm {
+        margin-top: 30rem;
+      }
+    }
+  }
+
+  // .home-adv__jobs
+  &__jobs {
+    margin-top: 40rem;
+    gap: 10rem;
+
+    @include md {
+      margin-top: 20rem;
+    }
+
+    div {
+      height: 40rem;
+      border: 1px solid #D4E7C8;
+      border-radius: 100rem;
+      padding: 0px 20rem;
+      color: #70B049;
+      display: inline-flex;
+      align-items: center;
+
+      @include sm {
+        height: 30rem;
+        padding: 0px 10rem;
+        font-size: 14rem;
+      }
+    }
+  }
+
+  // .home-adv__items
+  &__items {
+    gap: 40rem 52rem;
+
+    @include md {
+      gap: 20rem
+    }
+  }
+
+  // .home-adv__item
+  &__item {
+    width: calc(50% - 26rem);
+    flex-shrink: 0;
+
+    @include md {
+      width: calc(50% - 10rem);
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    h5 {
+      font-size: 30rem;
+      color: #70B049;
+
+      @include md {
+        font-size: 24rem;
+      }
+
+      @include sm {
+        font-size: 20rem;
+      }
+
+      span {
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    p {
+      margin-top: 10rem;
+      color: #8F9CA5;
+    }
+  }
+}

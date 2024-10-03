@@ -1,0 +1,194 @@
+@use "sass:math";
+
+// <НАСТРОЙКИ> ===============================================================================================================================================================================================================================================================================================
+$fontFamily: "Futura PT";
+$fontSize: 16;
+$mainColor: #294456;
+$maxWidthContainer: 100%;
+@import "base/base";
+
+// </НАСТРОЙКИ> ===============================================================================================================================================================================================================================================================================================
+html {
+  // font-size: calc(1vw / 14.4);
+  font-size: calc(100vw / 1800);
+  // font-size: calc(100vw / 1440);
+
+  @include xl {
+    font-size: calc(100vw / 1440);
+  }
+
+  @include lg {
+    font-size: calc(100vw / 1400);
+  }
+
+  @include lgFix {
+    font-size: calc(100vw / 1360);
+  }
+
+  @include md {
+    font-size: calc(100vw / 768);
+  }
+
+  // @include mdFix {
+  //   font-size: calc(100vw / 768);
+  // }
+
+  @include sm {
+    font-size: calc(100vw / 720);
+  }
+
+  @media(max-width: 576px) {
+    font-size: calc(100vw / 576);
+  }
+
+  @media(max-width: 480px) {
+    font-size: calc(100vw /480);
+  }
+
+  @media(max-width: 420px) {
+    font-size: calc(100vw /420);
+  }
+
+  @include xsm {
+    font-size: calc(100vw / 380);
+  }
+}
+
+body {
+  font-size: $fontSize + rem;
+  line-height: calc(31/ 24);
+  font-family: $fontFamily, sans-serif;
+  color: $mainColor;
+
+  // Скролл заблокирован
+  &._lock {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 99;
+  }
+
+  &._start {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+body {
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1 1 auto;
+  }
+
+  // Фикс для слайдеров
+  >* {
+    min-width: 0;
+  }
+}
+
+//<ОСНОВНАЯ СЕТКА>============================================================================================================================
+.container {
+  max-width: $maxWidthContainer;
+  padding-left: 40rem;
+  padding-right: 40rem;
+  width: 100%;
+
+  @include lg {
+    padding-right: 20rem;
+    padding-left: 20rem;
+  }
+
+  @include sm {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  // @include xl {
+  //     max-width: 1532px;
+  // }
+  // @include lg {
+  //     max-width: 1224px;
+  // }
+  // @include lgFix {
+  //     max-width: none;
+  //     padding-left: 36px;
+  //     padding-right: 36px;
+  // }
+  // @include md990 {
+  //     padding-left: 59px;
+  //     padding-right: 59px;
+  // }
+  // @include md800 {
+  //     padding-left: 36px;
+  //     padding-right: 36px;
+  // }
+  // @include fix720 {
+  //     padding-left: 56px;
+  //     padding-right: 56px;
+  // }
+  // @include vm {
+  //     padding-left: 20px;
+  //     padding-right: 20px;
+  // }
+}
+
+.swiper-wrapper {
+  display: flex;
+
+  .swiper-slide {
+    flex-shrink: 0
+  }
+}
+
+//</ОСНОВНАЯ СЕТКА>============================================================================================================================
+
+// Компоненты
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/filter/filter";
+@import "../components/feedbackBlock/feedbackBlock";
+@import "../components/newsSlider/newsSlider";
+@import "../components/homeCatalog/homeCatalog";
+@import "../components/req/req";
+@import "../components/feedBlock/feedBlock";
+@import "../components/adv/adv";
+@import "../components/homeAbout/homeAbout";
+@import "../components/targetBlock/targetBlock";
+@import "../components/corpIntro/corpIntro";
+@import "../components/adventCorp/adventCorp";
+@import "../components/fc/fc";
+
+// Подключение стилей отдельных страниц
+@import "./pages/main";
+@import "./pages/product-detail";
+@import "./pages/catalog";
+@import "./pages/about";
+@import "./pages/basket";
+@import "./pages/cooperation";
+@import "./pages/address";
+@import "./pages/shop";
+@import "./pages/quistion_doctor";
+@import "./pages/nalog";
+@import "./pages/articles";
+@import "./pages/news";
+@import "./pages/pad";
+@import "./pages/program_loyal";
+@import "./pages/home_visit";
+@import "./pages/visit";

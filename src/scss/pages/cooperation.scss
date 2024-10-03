@@ -1,0 +1,146 @@
+/******************************************/
+.slider-corp {
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  padding: 20rem 0;
+  background: #F4F1E8;
+  height: 100rem;
+
+  .marquee-track {
+    opacity: 1;
+    gap: 20rem;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  // .slider-corp__slide
+  &__slide {
+    height: 60rem;
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      width: max-content;
+    }
+  }
+
+}
+
+/******************************************/
+.advent-corp {
+  gap: 20rem;
+
+  @include sm {
+    gap: 10rem;
+  }
+
+  // .advent-corp__name
+  &__name {
+    width: calc(25% - 15rem);
+    flex-shrink: 0;
+
+    @include md {
+      width: calc(50% - 10rem);
+    }
+
+    @include sm {
+      width: 100%;
+      justify-content: center;
+    }
+
+    h2 {
+      font-size: 40rem;
+      color: #294456;
+      max-width: 80%;
+
+      @include lg {
+        max-width: 100%;
+      }
+
+      @include sm {
+        max-width: 277rem;
+        font-size: 30rem;
+        text-align: center;
+        padding-bottom: 20rem;
+      }
+    }
+  }
+
+  // .advent-corp__item
+  &__item {
+    width: calc(25% - 15rem);
+    flex-shrink: 0;
+    border-radius: 30rem;
+    padding: 30rem;
+    background: #F8F9F8;
+    display: flex;
+    flex-direction: column;
+    min-height: 300rem;
+    position: relative;
+    counter-increment: section;
+
+    @include md {
+      width: calc(50% - 10rem);
+      min-height: 194rem;
+    }
+
+    @include sm {
+      width: 100%;
+      min-height: max-content;
+      padding: 20rem;
+      border-radius: 20rem;
+    }
+
+    &::after {
+      content: "0" counter(section);
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-weight: 600;
+      font-size: 18rem;
+      color: #8F9CA5;
+
+      @include sm {
+        top: 20rem;
+        right: 20rem;
+        font-size: 16rem;
+      }
+    }
+  }
+
+  // .advent-corp__icon
+  &__icon {
+    width: 60rem;
+    height: 60rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20rem;
+    background: #F4F1E8;
+
+    img {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+
+  // .advent-corp__subtitle
+  &__subtitle {
+    font-size: 18rem;
+    line-height: calc(23 / 18);
+    margin-top: auto;
+
+    @include sm {
+      margin-top: 30rem;
+      font-size: 16rem;
+    }
+  }
+}
+
+/*************************************************/

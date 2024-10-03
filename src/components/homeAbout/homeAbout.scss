@@ -1,0 +1,153 @@
+.home-about {
+  @include sm {
+    flex-direction: column;
+  }
+
+  // .home-about__img
+  &__img {
+    width: 700rem;
+    flex-shrink: 0;
+
+    @include md {
+      width: 50%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .home-about__content
+  &__content {
+    flex: 1 1 auto;
+    padding: 80rem 40rem;
+    background: #F4F1E8;
+
+    @include md {
+      padding: 40rem;
+    }
+
+    @include sm {
+      padding: 30rem 10rem;
+    }
+
+    small {
+      @include sm {
+        margin-left: 20rem;
+      }
+    }
+
+    h2 {
+      font-size: 40rem;
+      margin-top: 10rem;
+      color: #70B049;
+
+      @include md {
+        font-size: 32rem;
+
+      }
+
+      @include sm {
+        font-size: 30rem;
+        padding-left: 20rem;
+      }
+    }
+
+  }
+
+  // .home-about__list
+  &__list {
+    margin-top: 60rem;
+    gap: 30rem;
+
+    @include lg {
+      gap: 16rem
+    }
+
+    @include md {
+      flex-direction: column;
+      margin-top: 30rem;
+      gap: 10rem
+    }
+  }
+
+  // .home-about__item
+  &__item {
+    flex: 1;
+    background: #F4F8F4;
+    border-radius: 15rem;
+    padding: 60rem 20rem 40rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include md {
+      flex-direction: row;
+      padding: 20rem;
+      align-items: start;
+    }
+
+    h5 {
+      font-size: 24rem;
+      text-align: center;
+
+      @include md {
+        font-size: 20rem;
+        text-align: left;
+        max-width: 140rem;
+      }
+    }
+
+    a {
+      display: inline-flex;
+      margin-top: 78rem;
+      gap: 10rem;
+      color: #70B049;
+      font-size: 12rem;
+      font-weight: 500;
+      transition: all 0.3s ease 0s;
+
+      @include md {}
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #294456;
+
+          svg {
+            stroke: #294456;
+          }
+        }
+      }
+
+      svg {
+        width: 20rem;
+        height: 20rem;
+        transition: all 0.3s ease 0s;
+        fill: transparent;
+        stroke: #70B049;
+      }
+    }
+  }
+
+  p {
+    font-size: 20rem;
+    color: #8F9CA5;
+
+    @include md {
+      font-size: 18rem;
+    }
+
+    @include sm {
+      font-size: 16rem;
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+  }
+}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Адреса" })
+    <body>
+        @@include('components/header/header.html', {class:""})
+        <main class="wrapper pt_180">
+            <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" /> -->
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap" type="text/javascript"></script>
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css" />
+
+            <div class="breadcrumbs breadcrumbs-tr mt_60">
+                <ul class="container">
+                    <li><a href="/" class="link-hover">Главная</a></li>
+                    <li><span>Адреса</span></li>
+                </ul>
+            </div>
+            <div class="container">
+                <h1 class="title mt_10">Адреса</h1>
+                <div id="adres-map"></div>
+                <script>
+                    var myMap;
+                    function maps(coor) {
+                        if (document.getElementById("adres-map")) {
+                            ymaps.ready(init);
+
+                            function init() {
+                                myMap = new ymaps.Map("adres-map", {
+                                    center: coor,
+                                    zoom: 13,
+                                    controls: []
+                                });
+
+                                myPlacemark = new ymaps.Placemark(
+                                    coor,
+                                    { iconCaption: "" },
+                                    {
+                                        preset: "islands#redIcon"
+                                    }
+                                );
+
+                                myMap.events.add("click", function () {
+                                    myMap.behaviors.enable("scrollZoom");
+                                });
+                                myMap.geoObjects.add(myPlacemark);
+                            }
+                        }
+                    }
+                    maps([55.768821, 37.601223]);
+                </script>
+                <div class="address-list">
+                    <div class="ca">
+                        <div class="head-ca flex cv">
+                            <div class="head-ca__left flex cv">
+                                <div class="head-ca__bus">
+                                    <img src="@img/icons/bus.svg" alt="bus_icon" />
+                                    <span class="head-ca__count">2</span>
+                                </div>
+                                <div class="head-ca__name"><span>Chromolab</span>Маяковская</div>
+                            </div>
+                            <div class="head-ca__btn"></div>
+                        </div>
+                        <div class="ca__body flex">
+                            <div class="ca__left">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Адрес:</small>
+                                            <p>г. Москва, Старопименовский пер., 6</p>
+                                        </li>
+                                        <li>
+                                            <small>Часы работы:</small>
+                                            <p>Пн-Пт: с 7:30 до 17:00. Сб-Вс: с 8:00 до 15:00. </p>
+                                        </li>
+                                        <li>
+                                            <small>Телефон:</small>
+                                            <a href="tel:+74953693309" class="link-hover">+7 (495) 369-33-09</a>
+                                        </li>
+                                        <li>
+                                            <small>Электронная почта:</small>
+                                            <a href="mailto:contact@chromolab.ru" class="link-hover">contact@chromolab.ru</a>
+                                        </li>
+                                        <li>
+                                            <small>Способ оплаты:</small>
+                                            <p>Наличные, банковская карта</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-ca flex cv">
+                                    <span><img src="@img/icons/danger.svg" alt="danger_icon" /></span>
+                                    Взятие гинекологических и урологических мазков не производится.
+                                </div>
+                            </div>
+                            <div class="ca__right">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Прием биоматериала:</small>
+                                            <p>
+                                                Кровь, кал: <br />
+                                                пн-пт 07:30-16:00, сб,вс 08:00-14:00 <br />
+                                                Моча, волосы, слюна: <br />пн-пт 07:30-16:45 Сб,вс 08:00-14:45
+                                            </p>
+                                            <p>На некоторые исследования есть ограничения в приеме биоматериала до 11:00, перед визитом в офис просим уточнять по телефону: +7 (495) 369-33-09, ежедневно с 07:30 до 19:30.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ca__text">
+                                    <small>Маршрут общественным транспортом </small>
+                                    <p>Станция метро «Маяковская». Последний вагон из центра или первый вагон в центр. Выход номер 3 на улицу Тверская. Из метро – налево, вдоль Тверской улицы до пересечения со Старопименовским переулком – повернуть налево, прямо приблизительно 130 метров. Вы на месте!</p>
+                                    <small>На автомобиле</small>
+                                    <p>Проезд осуществляется с улиц Малая Дмитровка или Тверская при движении из центра, затем вдоль Дегтярного и Воротниковского переулков. Обратите внимание, что движение вдоль Старопименовского переулка одностороннее. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="head-ca flex cv">
+                            <div class="head-ca__left flex cv">
+                                <div class="head-ca__bus">
+                                    <img src="@img/icons/bus.svg" alt="bus_icon" />
+                                    <span class="head-ca__count head-ca__count_red">1</span>
+                                </div>
+                                <div class="head-ca__name"><span>Chromolab</span>Проспект Вернадского</div>
+                            </div>
+                            <div class="head-ca__btn"></div>
+                        </div>
+                        <div class="ca__body flex">
+                            <div class="ca__left">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Адрес:</small>
+                                            <p>г. Москва, Старопименовский пер., 6</p>
+                                        </li>
+                                        <li>
+                                            <small>Часы работы:</small>
+                                            <p>Пн-Пт: с 7:30 до 17:00. Сб-Вс: с 8:00 до 15:00. </p>
+                                        </li>
+                                        <li>
+                                            <small>Телефон:</small>
+                                            <a href="tel:+74953693309" class="link-hover">+7 (495) 369-33-09</a>
+                                        </li>
+                                        <li>
+                                            <small>Электронная почта:</small>
+                                            <a href="mailto:contact@chromolab.ru" class="link-hover">contact@chromolab.ru</a>
+                                        </li>
+                                        <li>
+                                            <small>Способ оплаты:</small>
+                                            <p>Наличные, банковская карта</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-ca flex cv">
+                                    <span><img src="@img/icons/danger.svg" alt="danger_icon" /></span>
+                                    Взятие гинекологических и урологических мазков не производится.
+                                </div>
+                            </div>
+                            <div class="ca__right">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Прием биоматериала:</small>
+                                            <p>
+                                                Кровь, кал: <br />
+                                                пн-пт 07:30-16:00, сб,вс 08:00-14:00 <br />
+                                                Моча, волосы, слюна: <br />пн-пт 07:30-16:45 Сб,вс 08:00-14:45
+                                            </p>
+                                            <p>На некоторые исследования есть ограничения в приеме биоматериала до 11:00, перед визитом в офис просим уточнять по телефону: +7 (495) 369-33-09, ежедневно с 07:30 до 19:30.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ca__text">
+                                    <small>Маршрут общественным транспортом </small>
+                                    <p>Станция метро «Маяковская». Последний вагон из центра или первый вагон в центр. Выход номер 3 на улицу Тверская. Из метро – налево, вдоль Тверской улицы до пересечения со Старопименовским переулком – повернуть налево, прямо приблизительно 130 метров. Вы на месте!</p>
+                                    <small>На автомобиле</small>
+                                    <p>Проезд осуществляется с улиц Малая Дмитровка или Тверская при движении из центра, затем вдоль Дегтярного и Воротниковского переулков. Обратите внимание, что движение вдоль Старопименовского переулка одностороннее. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="head-ca flex cv">
+                            <div class="head-ca__left flex cv">
+                                <div class="head-ca__bus">
+                                    <img src="@img/icons/bus.svg" alt="bus_icon" />
+                                    <span class="head-ca__count head-ca__count_orange">6</span>
+                                </div>
+                                <div class="head-ca__name"><span>Chromolab</span>Проспект Вернадского</div>
+                            </div>
+                            <div class="head-ca__btn"></div>
+                        </div>
+                        <div class="ca__body flex">
+                            <div class="ca__left">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Адрес:</small>
+                                            <p>г. Москва, Старопименовский пер., 6</p>
+                                        </li>
+                                        <li>
+                                            <small>Часы работы:</small>
+                                            <p>Пн-Пт: с 7:30 до 17:00. Сб-Вс: с 8:00 до 15:00. </p>
+                                        </li>
+                                        <li>
+                                            <small>Телефон:</small>
+                                            <a href="tel:+74953693309" class="link-hover">+7 (495) 369-33-09</a>
+                                        </li>
+                                        <li>
+                                            <small>Электронная почта:</small>
+                                            <a href="mailto:contact@chromolab.ru" class="link-hover">contact@chromolab.ru</a>
+                                        </li>
+                                        <li>
+                                            <small>Способ оплаты:</small>
+                                            <p>Наличные, банковская карта</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-ca flex cv">
+                                    <span><img src="@img/icons/danger.svg" alt="danger_icon" /></span>
+                                    Взятие гинекологических и урологических мазков не производится.
+                                </div>
+                            </div>
+                            <div class="ca__right">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Прием биоматериала:</small>
+                                            <p>
+                                                Кровь, кал: <br />
+                                                пн-пт 07:30-16:00, сб,вс 08:00-14:00 <br />
+                                                Моча, волосы, слюна: <br />пн-пт 07:30-16:45 Сб,вс 08:00-14:45
+                                            </p>
+                                            <p>На некоторые исследования есть ограничения в приеме биоматериала до 11:00, перед визитом в офис просим уточнять по телефону: +7 (495) 369-33-09, ежедневно с 07:30 до 19:30.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ca__text">
+                                    <small>Маршрут общественным транспортом </small>
+                                    <p>Станция метро «Маяковская». Последний вагон из центра или первый вагон в центр. Выход номер 3 на улицу Тверская. Из метро – налево, вдоль Тверской улицы до пересечения со Старопименовским переулком – повернуть налево, прямо приблизительно 130 метров. Вы на месте!</p>
+                                    <small>На автомобиле</small>
+                                    <p>Проезд осуществляется с улиц Малая Дмитровка или Тверская при движении из центра, затем вдоль Дегтярного и Воротниковского переулков. Обратите внимание, что движение вдоль Старопименовского переулка одностороннее. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ca ca_no">
+                        <div class="head-ca flex cv">
+                            <div class="head-ca__left flex cv">
+                                <div class="head-ca__bus">
+                                    <img src="@img/icons/bus.svg" alt="bus_icon" />
+                                    <span class="head-ca__count">2</span>
+                                </div>
+                                <div class="head-ca__name"><span>Chromolab</span>Павелецкая</div>
+                            </div>
+                            <div class="head-ca__no">Офис в данный момент не работает</div>
+                            <div class="head-ca__btn"></div>
+                        </div>
+                        <div class="ca__body flex">
+                            <div class="ca__left">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Адрес:</small>
+                                            <p>г. Москва, Старопименовский пер., 6</p>
+                                        </li>
+                                        <li>
+                                            <small>Часы работы:</small>
+                                            <p>Пн-Пт: с 7:30 до 17:00. Сб-Вс: с 8:00 до 15:00. </p>
+                                        </li>
+                                        <li>
+                                            <small>Телефон:</small>
+                                            <a href="tel:+74953693309" class="link-hover">+7 (495) 369-33-09</a>
+                                        </li>
+                                        <li>
+                                            <small>Электронная почта:</small>
+                                            <a href="mailto:contact@chromolab.ru" class="link-hover">contact@chromolab.ru</a>
+                                        </li>
+                                        <li>
+                                            <small>Способ оплаты:</small>
+                                            <p>Наличные, банковская карта</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-ca flex cv">
+                                    <span><img src="@img/icons/danger.svg" alt="danger_icon" /></span>
+                                    Взятие гинекологических и урологических мазков не производится.
+                                </div>
+                            </div>
+                            <div class="ca__right">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Прием биоматериала:</small>
+                                            <p>
+                                                Кровь, кал: <br />
+                                                пн-пт 07:30-16:00, сб,вс 08:00-14:00 <br />
+                                                Моча, волосы, слюна: <br />пн-пт 07:30-16:45 Сб,вс 08:00-14:45
+                                            </p>
+                                            <p>На некоторые исследования есть ограничения в приеме биоматериала до 11:00, перед визитом в офис просим уточнять по телефону: +7 (495) 369-33-09, ежедневно с 07:30 до 19:30.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ca__text">
+                                    <small>Маршрут общественным транспортом </small>
+                                    <p>Станция метро «Маяковская». Последний вагон из центра или первый вагон в центр. Выход номер 3 на улицу Тверская. Из метро – налево, вдоль Тверской улицы до пересечения со Старопименовским переулком – повернуть налево, прямо приблизительно 130 метров. Вы на месте!</p>
+                                    <small>На автомобиле</small>
+                                    <p>Проезд осуществляется с улиц Малая Дмитровка или Тверская при движении из центра, затем вдоль Дегтярного и Воротниковского переулков. Обратите внимание, что движение вдоль Старопименовского переулка одностороннее. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ca ca_no">
+                        <div class="head-ca flex cv">
+                            <div class="head-ca__left flex cv">
+                                <div class="head-ca__bus">
+                                    <img src="@img/icons/bus.svg" alt="bus_icon" />
+                                    <span class="head-ca__count head-ca__count_purple">7</span>
+                                </div>
+                                <div class="head-ca__name"><span>Chromolab</span>Павелецкая</div>
+                            </div>
+                            <div class="head-ca__no">Офис в данный момент не работает</div>
+                            <div class="head-ca__btn"></div>
+                        </div>
+                        <div class="ca__body flex">
+                            <div class="ca__left">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Адрес:</small>
+                                            <p>г. Москва, Старопименовский пер., 6</p>
+                                        </li>
+                                        <li>
+                                            <small>Часы работы:</small>
+                                            <p>Пн-Пт: с 7:30 до 17:00. Сб-Вс: с 8:00 до 15:00. </p>
+                                        </li>
+                                        <li>
+                                            <small>Телефон:</small>
+                                            <a href="tel:+74953693309" class="link-hover">+7 (495) 369-33-09</a>
+                                        </li>
+                                        <li>
+                                            <small>Электронная почта:</small>
+                                            <a href="mailto:contact@chromolab.ru" class="link-hover">contact@chromolab.ru</a>
+                                        </li>
+                                        <li>
+                                            <small>Способ оплаты:</small>
+                                            <p>Наличные, банковская карта</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-ca flex cv">
+                                    <span><img src="@img/icons/danger.svg" alt="danger_icon" /></span>
+                                    Взятие гинекологических и урологических мазков не производится.
+                                </div>
+                            </div>
+                            <div class="ca__right">
+                                <div class="ca__cart">
+                                    <ul>
+                                        <li>
+                                            <small>Прием биоматериала:</small>
+                                            <p>
+                                                Кровь, кал: <br />
+                                                пн-пт 07:30-16:00, сб,вс 08:00-14:00 <br />
+                                                Моча, волосы, слюна: <br />пн-пт 07:30-16:45 Сб,вс 08:00-14:45
+                                            </p>
+                                            <p>На некоторые исследования есть ограничения в приеме биоматериала до 11:00, перед визитом в офис просим уточнять по телефону: +7 (495) 369-33-09, ежедневно с 07:30 до 19:30.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ca__text">
+                                    <small>Маршрут общественным транспортом </small>
+                                    <p>Станция метро «Маяковская». Последний вагон из центра или первый вагон в центр. Выход номер 3 на улицу Тверская. Из метро – налево, вдоль Тверской улицы до пересечения со Старопименовским переулком – повернуть налево, прямо приблизительно 130 метров. Вы на месте!</p>
+                                    <small>На автомобиле</small>
+                                    <p>Проезд осуществляется с улиц Малая Дмитровка или Тверская при движении из центра, затем вдоль Дегтярного и Воротниковского переулков. Обратите внимание, что движение вдоль Старопименовского переулка одностороннее. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

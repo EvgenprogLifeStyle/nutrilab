@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Выезд на дом" })
+    <body>
+        @@include('components/header/header.html', {})
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=initMap" type="text/javascript"></script>
+        <main class="wrapper pt_180">
+            <div class="container">
+                <section class="mt_60 intro-visit flex">
+                    <div class="intro-visit__content">
+                        <h1 class="title"><span>Бесплатный</span>выезд на дом при заказе <nobr>от 4 500 ₽ *</nobr></h1>
+                        <p>Квалифицированные медсестры приедут к вам домой или на работу!</p>
+                        <div class="btn btn-primary openOrder">Оформить выезд на дом</div>
+                    </div>
+                    <div class="intro-visit__img" data-da=".intro-visit__content,1023,1">
+                        <img src="@img/visit_intro.png" alt="visit_intro_img" />
+                    </div>
+                </section>
+                <section class="price-visit mt_120 flex">
+                    <div class="price-visit__content">
+                        <div class="price-visit__head">
+                            <h4 class="subtitle">Выезд на дом в Москве</h4>
+                            <h2 class="title">Стоимость вызова</h2>
+                        </div>
+                        <div class="price-visit__overlay">
+                            <ul>
+                                <li>
+                                    <div>В пределах МКАД</div>
+                                    <div>1 400 ₽</div>
+                                    <div>0 ₽*</div>
+                                </li>
+                                <li>
+                                    <div>до 20 км от МКАД</div>
+                                    <div>3 500 ₽</div>
+                                    <div>2 100 ₽*</div>
+                                </li>
+                                <li>
+                                    <div>до 40 км от МКАД</div>
+                                    <div>4 700 ₽</div>
+                                    <div>3 300 ₽*</div>
+                                </li>
+                                <li>
+                                    <div>до 50 км от МКАД</div>
+                                    <div>5 400 ₽</div>
+                                    <div>4 000 ₽*</div>
+                                </li>
+                                <li>
+                                    <div>до 60 км от МКАД</div>
+                                    <div>6 100 ₽</div>
+                                    <div>4 700 ₽*</div>
+                                </li>
+                                <li>
+                                    <div>до 70 км от МКАД</div>
+                                    <div>6 800 ₽</div>
+                                    <div>5 400 ₽*</div>
+                                </li>
+                            </ul>
+                            <div class="price-visit__bottom flex">
+                                <div class="price-visit__icon">
+                                    <img src="@img/icons/i_gray.svg" alt="i_gray_img" />
+                                </div>
+                                <div class="price-visit__small">
+                                    <p>При заказе выезда для 2 и более человек на 1 адрес услуга выезда оплачивается 1 раз</p>
+                                    <p>* БЕСПЛАТНЫЙ выезд на дом внутри МКАД при заказе от 4500 руб.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map" class="price-visit__map"></div>
+                    <script>
+                        var myMap;
+                        function maps(coor) {
+                            if (document.getElementById("map")) {
+                                ymaps.ready(init);
+
+                                function init() {
+                                    myMap = new ymaps.Map("map", {
+                                        center: coor,
+                                        zoom: 13,
+                                        controls: []
+                                    });
+
+                                    myPlacemark = new ymaps.Placemark(
+                                        coor,
+                                        { iconCaption: "" },
+                                        {
+                                            preset: "islands#redIcon"
+                                        }
+                                    );
+
+                                    myMap.events.add("click", function () {
+                                        myMap.behaviors.enable("scrollZoom");
+                                    });
+                                    myMap.geoObjects.add(myPlacemark);
+                                }
+                            }
+                        }
+                        maps([55.768821, 37.601223]);
+                    </script>
+                </section>
+
+                <section class="visit-adv mt_120">
+                    <div class="visit-adv__item">
+                        <div class="visit-adv__body">
+                            <h4>Удобно</h4>
+                            <p>Нет необходимости рано просыпаться и ехать на голодный желудок в медицинский офис для сдачи анализов. Вы подстраиваете выезд медсестры под свой график, временной интервал 1 час.</p>
+                        </div>
+                        <div class="visit-adv__img"><img src="@img/visit/adv_01.png" alt="adv_01_img" /></div>
+                    </div>
+                    <div class="visit-adv__item">
+                        <div class="visit-adv__img"><img src="@img/visit/adv_02.png" alt="adv_02_img" /></div>
+                        <div class="visit-adv__body">
+                            <h4>Профессионально</h4>
+                            <p>Приедут квалицированные медицинские сестры. Могут брать биоматериал у грудничков возрастом от 3-х месяцев.</p>
+                        </div>
+                    </div>
+                    <div class="visit-adv__item">
+                        <div class="visit-adv__body">
+                            <h4>Просто</h4>
+                            <p>Оформите заявку на сайте, дождитесь подтверждения от менеджеров и в назначенное время сдайте анализы.</p>
+                        </div>
+                        <div class="visit-adv__img"><img src="@img/visit/adv_03.png" alt="adv_03_img" /></div>
+                    </div>
+                    <div class="visit-adv__item">
+                        <div class="visit-adv__img"><img src="@img/visit/adv_04.png" alt="adv_04_img" /></div>
+                        <div class="visit-adv__body">
+                            <h4>Точно</h4>
+                            <p>Тщательный контроль качества и работа по всем правилам проведения лабораторных исследований гарантируют достоверность результатов.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="visit-arr flex sb mt_120">
+                    <div class="visit-arr__content">
+                        <h2 class="title">
+                            Оформите выезд <br />
+                            на дом за 1 минуту
+                        </h2>
+                        <p>
+                            Наш специалист свяжется с вами в течение <br />
+                            10 минут для подтверждения заявки
+                        </p>
+                    </div>
+                    <form action="" class="visit-arr__form" data-parsley-validate>
+                        <div class="input-box">
+                            <label>Ваше имя:</label>
+                            <input type="text" class="input-box__input" placeholder="Иван" required data-parsley-required-message="Поле обязательно для заполнения" data-parsley-minlength="3" data-parsley-group="basket" />
+                        </div>
+                        <div class="input-box">
+                            <label>Ваш город:</label>
+                            <input type="text" class="input-box__input" placeholder="Москва" required data-parsley-required-message="Поле обязательно для заполнения" data-parsley-minlength="3" data-parsley-group="basket" />
+                        </div>
+
+                        <div class="input-box">
+                            <label>Ваш телефон:</label>
+                            <input type="text" class="input-box__input phone" placeholder="+7 (999) 999 00 99" required data-parsley-required-message="Поле обязательно к заполнению" data-parsley-pattern="\+7\s\(\d{3}\)\s\d{3}\s\d{4}" data-parsley-group="basket" data-parsley-group="basket" />
+                        </div>
+                        <div class="visit-arr__bottom flex cv sb">
+                            <div class="visit-arr__time flex cv">
+                                <span><img src="@img/icons/clock.svg" alt="clock-img" /></span>
+                                <p>
+                                    Выезд осуществляется <br />
+                                    с 7:30 до 16:00
+                                </p>
+                            </div>
+
+                            <button class="btn btn-primary">Оформить заявку</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="service-visit mt_120">
+                    <div class="service-visit__head flex">
+                        <div class="service-visit__title">Условия предоставления услуги</div>
+                        <ul>
+                            <li>Симптомы ОРВИ, кашель, затрудненное дыхание, температура тела выше 37 °С, а также факт контакта с людьми, находящимися на карантине, или наличие подтвержденного положительного результата теста на COVID-19 служат основанием для ограничений в предоставлении услуги. </li>
+                            <li>Для сдачи на дому недоступен ряд анализов: глюкозотолерантный тест, гастропанель, взятие урогенитальных мазков, посев крови на стерильность, взятие мазков из глаза и уха, спермограмма, посев отделяемого ран. </li>
+                            <li>При гемофилии и состояниях, сопровождающихся остановкой сердца и дыхания, рекомендуется сдавать анализы в условиях стационара.</li>
+                        </ul>
+                    </div>
+                    <div class="service-visit__wrap flex cv mt_120">
+                        <div class="video-pad">
+                            <video src="files/video.MP4" class="video-pad__sourse" playsinline poster="img/poster_02.png"></video>
+                            <button class="video-pad__btn">
+                                <img src="@img/icons/play.svg" alt="play_icon" />
+                            </button>
+                        </div>
+                        <div class="service-visit__content">
+                            <div class="service-visit__subtitle">
+                                Заявки принимаются <br />
+                                ежедневно с 7:30 до 19:30
+                            </div>
+                            <div class="service-visit__list flex dc">
+                                <a href="tel:+74953693309" class="service-visit__item link-hover">
+                                    <span><img src="@img/icons/phone.svg" alt="phone_img" /></span>
+                                    <p>+7 (495) 369-33-09</p>
+                                </a>
+                                <a href="mailto:vd@chromolab.ru" class="service-visit__item link-hover">
+                                    <span><img src="@img/icons/mailto.svg" alt="mailto_img" /></span>
+                                    <p>vd@chromolab.ru</p>
+                                </a>
+                                <a href="https://www.whatsapp.com/" class="service-visit__item link-hover">
+                                    <span><img src="@img/icons/whatsapp.svg" alt="whatsapp_img" /></span>
+                                    <p>+7 (977) 649-09-25</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        @@include('components/footer/footer.html', {})
+    </body>
+</html>

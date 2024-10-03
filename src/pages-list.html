@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('components/head.html', { "title":"Список страниц" })
+    <body>
+        <div class="wrapper">
+            @@include('components/header/header.html', {})
+            <main class="main mt_120 container pages-list">
+                <style>
+                    .pages-list ul li {
+                        margin-bottom: 12px;
+                        font-size: 20rem;
+                    }
+                </style>
+                <ul>
+                    <li><a class="link-hover" href="index.html">Главная</a></li>
+                    <li><a class="link-hover" href="product-detail.html">Карточка товара</a></li>
+                    <li><a class="link-hover" href="catalog.html">Каталог</a></li>
+                    <li><a class="link-hover" href="about.html">О компании</a></li>
+                    <li><a class="link-hover" href="basket.html">Оформление заказа</a></li>
+                    <li><a class="link-hover" href="cooperation.html">Сотрудничество</a></li>
+                    <li><a class="link-hover" href="address.html">Адреса</a></li>
+                    <li><a class="link-hover" href="shop.html">Интернет-магазин</a></li>
+                    <li><a class="link-hover" href="shop-detail.html">Интернет-магазин(детальная)</a></li>
+                    <li><a class="link-hover" href="question_doctor.html">Вопрос врачу</a></li>
+                    <li><a class="link-hover" href="tax_deduction.html">Налоговый вычет</a></li>
+                    <li><a class="link-hover" href="articles.html">Статьи</a></li>
+                    <li><a class="link-hover" href="articles-detail.html">Статьи(детальная)</a></li>
+                    <li><a class="link-hover" href="news.html">Новости</a></li>
+                    <li><a class="link-hover" href="preparation-analysis.html">Подготовка к сдаче анализов</a></li>
+                    <li><a class="link-hover" href="preparation-analysis_detail.html">Подготовка к сдаче анализов(детальная)</a></li>
+                    <li><a class="link-hover" href="program_loyal.html">Программа лояльности</a></li>
+                    <li><a class="link-hover" href="stock.html">Акции</a></li>
+                    <li><a class="link-hover" href="index_client.html">Главная(Клиентам)</a></li>
+                    <li><a class="link-hover" href="index_spec.html">Главная(Специалистам)</a></li>
+                    <li><a class="link-hover" href="home_visit.html">Выезд на дом</a></li>
+                </ul>
+            </main>
+            @@include('components/footer/footer.html', {})
+        </div>
+    </body>
+</html>
